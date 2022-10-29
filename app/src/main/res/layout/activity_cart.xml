@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.CartActivity">
+
+    <Toolbar
+        android:id="@+id/my_cart_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:background="#ae0000"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        android:title="        My Cart"
+        app:layout_constraintBottom_toTopOf="@+id/cart_rec"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/total_price_textview"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="2dp"
+        android:background="#ae0000"
+        android:fontFamily="@font/amethysta"
+        android:gravity="center"
+        android:padding="18dp"
+        android:text="Total Price : 40$"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/buy_now"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.487"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cart_rec"
+        app:layout_constraintVertical_bias="1.0"
+        app:layout_constraintWidth_percent="0.9" />
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/cart_rec"
+        android:layout_width="356dp"
+        android:layout_height="494dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="5dp"
+        app:layout_constraintBottom_toTopOf="@+id/total_price_textview"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.49"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/my_cart_toolbar"
+        app:layout_constraintWidth_percent="0.9"
+        tools:listitem="@layout/my_cart_item" />
+
+
+    <Button
+        android:id="@+id/buy_now"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginBottom="4dp"
+        android:background="#ae0000"
+        android:backgroundTint="#ae0000"
+        android:drawableLeft="@drawable/shopping_cart_checkout"
+        android:drawableTint="@color/black"
+        android:padding="14dp"
+        android:text="Buy Now"
+        android:textAllCaps="false"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.609"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/total_price_textview"
+        app:layout_constraintWidth_percent="0.9" />
+
+    <ImageView
+        android:id="@+id/back_arrow"
+        android:layout_width="30dp"
+        android:layout_height="28dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/cart_rec"
+        app:layout_constraintStart_toStartOf="@+id/my_cart_toolbar"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.157"
+        app:srcCompat="@drawable/back_arrow" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
